@@ -1,0 +1,11 @@
+﻿<!-- 
+ (C) 2012 
+
+ This software is not free, and may not be used or distrubuted without
+ the written consent of the author.
+
+ @notes
+
+ @author Matthew Stebbing
+
+--> 

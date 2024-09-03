@@ -1,0 +1,47 @@
+﻿<Window x:Class="Frontier.Ssc.Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:frontier="clr-namespace:Frontier.Library.Windows.Wpf.OilUI;assembly=Frontier.Library.Windows.Wpf.OilUI"
+        xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        MinHeight="400" MinWidth="600" WindowStartupLocation="CenterScreen"
+        Loaded="MainWindow_Loaded" ResizeMode="NoResize" 
+        Style="{StaticResource OilWindowStyle}" xmlns:my="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon">
+    
+    <Canvas>
+        <ribbon:Ribbon Height="100" Canvas.Top="15" Background="Black"
+                       Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Canvas}}, Path=ActualWidth}">
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu>
+                    <ribbon:RibbonApplicationMenuItem Header="Test Header">
+                        
+                    </ribbon:RibbonApplicationMenuItem>
+                </ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
+            
+            <ribbon:RibbonTab Header="Tab Header">
+                <ribbon:RibbonGroup Header="Test Header">
+                    <ribbon:RibbonButton Label="Test Button"/>
+                    <ribbon:RibbonButton Label="Test Button 2"/>
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+        </ribbon:Ribbon>
+        
+        <frontier:OilTitleBar Height="35" Name="titleBarMain" 
+                              OnButtonCloseClicked="titleBarMain_OnButtonCloseClicked"
+                              OnButtonMaximizeNormalClicked="titleBarMain_OnButtonMaximizeNormalClicked"
+                              OnButtonMinimizeClicked="titleBarMain_OnButtonMinimizeClicked"
+                              OnLeftMouseButtonDown="titleBarMain_OnLeftMouseButtonDown"
+                              OnLeftMouseButtonUp="titleBarMain_OnLeftMouseButtonUp"
+                              OnMouseDoubleClicked="titleBarMain_OnMouseDoubleClicked"
+                              OnMouseMoved="titleBarMain_OnMouseMoved"
+                              OnMouseLeave="titleBarMain_OnMouseLeave"
+                              Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Canvas}}, Path=ActualWidth}"/>
+
+        <frontier:OilButton Canvas.Left="194" Canvas.Top="126" Name="oilButton1" 
+                            Width="80" Height="35" Text="Yes"/>
+
+        <frontier:OilButton Canvas.Left="302" Canvas.Top="128"
+                            Width="80" Height="35" Text="No"
+                            Name="oilButton2" />
+    </Canvas>
+</Window>

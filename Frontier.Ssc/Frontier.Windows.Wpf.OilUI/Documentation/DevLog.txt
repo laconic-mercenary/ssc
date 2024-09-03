@@ -1,0 +1,24 @@
+﻿(C) Frontier Outpost 28 Jan 2011
+
+> OilTitleBar
+	- pretty well complete, but will annoyingly need to be integreated every single time
+	you want to include it in a main window.  Unless there's a way to make a template that includes
+	code behind.  See Examples folder.
+	- implement a right click context menu
+
+
+TO ADD:
+	- OilSplashScreen [ ]
+		components:
+			- company image
+			- application image
+			- progress bar
+			- label of activities / status
+			- cancel button?
+
+		Methods:
+			+ CurrentValue
+			+ MaxValue
+			+ MinValue
+
+	- OilMessageBox [X]

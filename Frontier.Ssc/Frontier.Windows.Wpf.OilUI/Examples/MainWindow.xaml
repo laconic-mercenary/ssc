@@ -1,0 +1,19 @@
+﻿<Window x:Class="Frontier.Ssc.Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:frontier="clr-namespace:Frontier.Library.Windows.Wpf.OilUI;assembly=Frontier.Library.Windows.Wpf.OilUI"
+        MinHeight="400" MinWidth="600" WindowStartupLocation="CenterScreen"
+        Loaded="MainWindow_Loaded" ResizeMode="NoResize" Style="{StaticResource OilWindowStyle}">
+    <Canvas>
+        <frontier:OilTitleBar Height="35" Name="titleBarMain" 
+                              OnButtonCloseClicked="titleBarMain_OnButtonCloseClicked"
+                              OnButtonMaximizeNormalClicked="titleBarMain_OnButtonMaximizeNormalClicked"
+                              OnButtonMinimizeClicked="titleBarMain_OnButtonMinimizeClicked"
+                              OnLeftMouseButtonDown="titleBarMain_OnLeftMouseButtonDown"
+                              OnLeftMouseButtonUp="titleBarMain_OnLeftMouseButtonUp"
+                              OnMouseDoubleClicked="titleBarMain_OnMouseDoubleClicked"
+                              OnMouseMoved="titleBarMain_OnMouseMoved"
+                              OnMouseLeave="titleBarMain_OnMouseLeave"
+                              Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Canvas}}, Path=ActualWidth}"/>
+    </Canvas>
+</Window>
